@@ -1,0 +1,11 @@
+
+.icon-wrap {
+	width: 100rpx;
+	height: 100rpx;
+	-webkit-border-radius: 50%;
+	        border-radius: 50%;
+}
+.icon-wrap text {
+	font-size: 56rpx;
+}
+
