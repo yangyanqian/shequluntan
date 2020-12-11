@@ -1,0 +1,6 @@
+{
+  "navigationBarTitleText": "绑定邮箱",
+  "usingComponents": {
+    "button-com": "/components/common/button-com"
+  }
+}

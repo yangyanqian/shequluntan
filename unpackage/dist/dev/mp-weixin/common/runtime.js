@@ -12,7 +12,7 @@
 /******/ 		var moduleId, chunkId, i = 0, resolves = [];
 /******/ 		for(;i < chunkIds.length; i++) {
 /******/ 			chunkId = chunkIds[i];
-/******/ 			if(installedChunks[chunkId]) {
+/******/ 			if(Object.prototype.hasOwnProperty.call(installedChunks, chunkId) && installedChunks[chunkId]) {
 /******/ 				resolves.push(installedChunks[chunkId][0]);
 /******/ 			}
 /******/ 			installedChunks[chunkId] = 0;
@@ -48,6 +48,7 @@
 /******/ 				result = __webpack_require__(__webpack_require__.s = deferredModule[0]);
 /******/ 			}
 /******/ 		}
+/******/
 /******/ 		return result;
 /******/ 	}
 /******/
@@ -104,11 +105,11 @@
 /******/
 /******/
 /******/ 		// mini-css-extract-plugin CSS loading
-/******/ 		var cssChunks = {"components/common/common-list":1,"components/uni-ui/uni-nav-bar/uni-nav-bar":1,"components/uni-ui/uni-popup/uni-popup":1,"components/uni-ui/uni-list-item/uni-list-item":1,"components/uni-ui/uni-list/uni-list":1,"components/common/upload-image":1,"components/uni-ui/uni-icons/uni-icons":1,"components/uni-ui/uni-status-bar/uni-status-bar":1,"components/uni-ui/uni-badge/uni-badge":1,"components/uni-ui/uni-transition/uni-transition":1};
+/******/ 		var cssChunks = {"components/common/common-list":1,"components/uni-ui/uni-nav-bar/uni-nav-bar":1,"components/uni-ui/uni-popup/uni-popup":1,"components/uni-ui/uni-list-item/uni-list-item":1,"components/uni-ui/uni-list/uni-list":1,"components/common/upload-image":1,"components/uni-ui/mpvue-citypicker/mpvueCityPicker":1,"components/uni-ui/uni-collapse-item/uni-collapse-item":1,"components/uni-ui/uni-collapse/uni-collapse":1,"components/uni-ui/uni-status-bar/uni-status-bar":1,"components/uni-ui/uni-icons/uni-icons":1,"components/uni-ui/uni-badge/uni-badge":1,"components/uni-ui/uni-transition/uni-transition":1};
 /******/ 		if(installedCssChunks[chunkId]) promises.push(installedCssChunks[chunkId]);
 /******/ 		else if(installedCssChunks[chunkId] !== 0 && cssChunks[chunkId]) {
 /******/ 			promises.push(installedCssChunks[chunkId] = new Promise(function(resolve, reject) {
-/******/ 				var href = "" + ({"components/common/divider":"components/common/divider","components/common/no-thing":"components/common/no-thing","components/common/common-list":"components/common/common-list","components/common/load-more":"components/common/load-more","components/news/hot-cate":"components/news/hot-cate","components/news/topic-list":"components/news/topic-list","components/uni-ui/uni-nav-bar/uni-nav-bar":"components/uni-ui/uni-nav-bar/uni-nav-bar","components/msg/msg-list":"components/msg/msg-list","components/uni-ui/uni-popup/uni-popup":"components/uni-ui/uni-popup/uni-popup","components/uni-ui/uni-list-item/uni-list-item":"components/uni-ui/uni-list-item/uni-list-item","components/uni-ui/uni-list/uni-list":"components/uni-ui/uni-list/uni-list","components/user-list/user-list":"components/user-list/user-list","components/common/upload-image":"components/common/upload-image","components/user-list/user-chat":"components/user-list/user-chat","components/common/bottom-input":"components/common/bottom-input","components/common/share-more":"components/common/share-more","components/uni-ui/uni-icons/uni-icons":"components/uni-ui/uni-icons/uni-icons","components/uni-ui/uni-status-bar/uni-status-bar":"components/uni-ui/uni-status-bar/uni-status-bar","components/uni-ui/uni-badge/uni-badge":"components/uni-ui/uni-badge/uni-badge","components/uni-ui/uni-transition/uni-transition":"components/uni-ui/uni-transition/uni-transition"}[chunkId]||chunkId) + ".wxss";
+/******/ 				var href = "" + ({"components/common/divider":"components/common/divider","components/common/no-thing":"components/common/no-thing","components/common/common-list":"components/common/common-list","components/common/load-more":"components/common/load-more","components/news/hot-cate":"components/news/hot-cate","components/news/topic-list":"components/news/topic-list","components/uni-ui/uni-nav-bar/uni-nav-bar":"components/uni-ui/uni-nav-bar/uni-nav-bar","components/msg/msg-list":"components/msg/msg-list","components/uni-ui/uni-popup/uni-popup":"components/uni-ui/uni-popup/uni-popup","components/uni-ui/uni-list-item/uni-list-item":"components/uni-ui/uni-list-item/uni-list-item","components/uni-ui/uni-list/uni-list":"components/uni-ui/uni-list/uni-list","components/user-list/user-list":"components/user-list/user-list","components/common/upload-image":"components/common/upload-image","components/user-list/user-chat":"components/user-list/user-chat","components/common/bottom-input":"components/common/bottom-input","components/common/share-more":"components/common/share-more","components/common/button-com":"components/common/button-com","components/uni-ui/mpvue-citypicker/mpvueCityPicker":"components/uni-ui/mpvue-citypicker/mpvueCityPicker","components/uni-ui/uni-collapse-item/uni-collapse-item":"components/uni-ui/uni-collapse-item/uni-collapse-item","components/uni-ui/uni-collapse/uni-collapse":"components/uni-ui/uni-collapse/uni-collapse","common/login-other":"common/login-other","components/uni-ui/uni-status-bar/uni-status-bar":"components/uni-ui/uni-status-bar/uni-status-bar","components/uni-ui/uni-icons/uni-icons":"components/uni-ui/uni-icons/uni-icons","components/uni-ui/uni-badge/uni-badge":"components/uni-ui/uni-badge/uni-badge","components/uni-ui/uni-transition/uni-transition":"components/uni-ui/uni-transition/uni-transition"}[chunkId]||chunkId) + ".wxss";
 /******/ 				var fullhref = __webpack_require__.p + href;
 /******/ 				var existingLinkTags = document.getElementsByTagName("link");
 /******/ 				for(var i = 0; i < existingLinkTags.length; i++) {
@@ -170,6 +171,8 @@
 /******/ 				}
 /******/ 				script.src = jsonpScriptSrc(chunkId);
 /******/
+/******/ 				// create error before stack unwound to get useful stacktrace later
+/******/ 				var error = new Error();
 /******/ 				onScriptComplete = function (event) {
 /******/ 					// avoid mem leaks in IE.
 /******/ 					script.onerror = script.onload = null;
@@ -179,7 +182,8 @@
 /******/ 						if(chunk) {
 /******/ 							var errorType = event && (event.type === 'load' ? 'missing' : event.type);
 /******/ 							var realSrc = event && event.target && event.target.src;
-/******/ 							var error = new Error('Loading chunk ' + chunkId + ' failed.\n(' + errorType + ': ' + realSrc + ')');
+/******/ 							error.message = 'Loading chunk ' + chunkId + ' failed.\n(' + errorType + ': ' + realSrc + ')';
+/******/ 							error.name = 'ChunkLoadError';
 /******/ 							error.type = errorType;
 /******/ 							error.request = realSrc;
 /******/ 							chunk[1](error);

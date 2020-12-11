@@ -1,0 +1,9 @@
+{
+  "defaultTitle": "修改资料",
+  "usingComponents": {
+    "uni-list": "/components/uni-ui/uni-list/uni-list",
+    "uni-list-item": "/components/uni-ui/uni-list-item/uni-list-item",
+    "mpvue-city-picker": "/components/uni-ui/mpvue-citypicker/mpvueCityPicker",
+    "button-com": "/components/common/button-com"
+  }
+}

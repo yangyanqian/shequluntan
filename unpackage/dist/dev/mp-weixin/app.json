@@ -13,7 +13,13 @@
     "pages/user-chat/user-chat",
     "pages/detail/detail",
     "pages/my-set/my-set",
-    "pages/my-password/my-password"
+    "pages/my-password/my-password",
+    "pages/my-email/my-email",
+    "pages/my-info/my-info",
+    "pages/my-feedback/my-feedback",
+    "pages/about/about",
+    "pages/login/login",
+    "pages/my-space/my-space"
   ],
   "subPackages": [],
   "window": {
@@ -57,5 +63,6 @@
   "usingComponents": {
     "divider": "/components/common/divider",
     "no-thing": "/components/common/no-thing"
-  }
+  },
+  "sitemapLocation": "sitemap1.json"
 }

@@ -1,0 +1,8 @@
+{
+  "pullRefresh": true,
+  "usingComponents": {
+    "no-thing": "/components/common/no-thing",
+    "msg-list": "/components/msg/msg-list",
+    "uni-popup": "/components/uni-ui/uni-popup/uni-popup"
+  }
+}

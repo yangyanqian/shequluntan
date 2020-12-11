@@ -2,6 +2,7 @@
   "navigationBarTitleText": "设置",
   "usingComponents": {
     "uni-list": "/components/uni-ui/uni-list/uni-list",
-    "uni-list-item": "/components/uni-ui/uni-list-item/uni-list-item"
+    "uni-list-item": "/components/uni-ui/uni-list-item/uni-list-item",
+    "button-com": "/components/common/button-com"
   }
 }

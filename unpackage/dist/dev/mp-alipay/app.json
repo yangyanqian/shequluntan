@@ -1,12 +1,65 @@
 {
   "pages": [
-    "pages/index/index"
+    "pages/index/index",
+    "pages/news/news",
+    "pages/msg/msg",
+    "pages/my/my",
+    "components/common/common",
+    "pages/search/search",
+    "pages/add-input/add-input",
+    "pages/topic-nav/topic-nav",
+    "pages/topic-detail/topic-detail",
+    "pages/user-list/user-list",
+    "pages/user-chat/user-chat",
+    "pages/detail/detail",
+    "pages/my-set/my-set",
+    "pages/my-password/my-password",
+    "pages/my-email/my-email",
+    "pages/my-info/my-info",
+    "pages/my-feedback/my-feedback",
+    "pages/about/about",
+    "pages/login/login",
+    "pages/my-space/my-space"
   ],
   "subPackages": [],
   "window": {
-    "defaultTitle": "uni-app",
-    "titleBarColor": "#F8F8F8",
-    "backgroundColor": "#F8F8F8"
+    "defaultTitle": "",
+    "titleBarColor": "#FFF",
+    "backgroundColor": "#FFF"
   },
-  "usingComponents": {}
+  "tabBar": {
+    "textColor": "#4E4E4E",
+    "selectedColor": "#FC5C82",
+    "backgroundColor": "#fff",
+    "items": [
+      {
+        "pagePath": "pages/index/index",
+        "name": "首页",
+        "icon": "static/tabbar/index.png",
+        "activeIcon": "static/tabbar/indexed.png"
+      },
+      {
+        "pagePath": "pages/news/news",
+        "name": "动态",
+        "icon": "static/tabbar/news.png",
+        "activeIcon": "static/tabbar/newsed.png"
+      },
+      {
+        "pagePath": "pages/msg/msg",
+        "name": "消息",
+        "icon": "static/tabbar/paper.png",
+        "activeIcon": "static/tabbar/papered.png"
+      },
+      {
+        "pagePath": "pages/my/my",
+        "name": "我的",
+        "icon": "static/tabbar/home.png",
+        "activeIcon": "static/tabbar/homeed.png"
+      }
+    ]
+  },
+  "usingComponents": {
+    "divider": "/components/common/divider",
+    "no-thing": "/components/common/no-thing"
+  }
 }

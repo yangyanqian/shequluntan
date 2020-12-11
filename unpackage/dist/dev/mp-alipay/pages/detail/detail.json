@@ -1,0 +1,8 @@
+{
+  "usingComponents": {
+    "divider": "/components/common/divider",
+    "common-list": "/components/common/common-list",
+    "bottom-input": "/components/common/bottom-input",
+    "share-more": "/components/common/share-more"
+  }
+}
